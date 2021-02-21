@@ -1,0 +1,87 @@
+body{
+    /* background-color: palevioletred !important; */
+    background-image: url("bg6.jpg") !important;
+    height: 679px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.login-box{
+    position: relative;
+    top:100px;
+    /* left:340px; */
+    background-color: white;
+    height: 550px;
+    width: 810px;
+    border-radius: 40px;
+}
+.welcome{
+    position: absolute;
+    width: 48%; height: 100%;
+    background-color: whitesmoke;
+    background-image: url("mb3.png");
+    background-size:389px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    font-family: 'Bree Serif', serif;
+}
+.login {
+    position: absolute;
+    height:100%;
+    width: 53%;
+    left:386px;
+    /* background-color: whitesmoke; */
+    padding:30px 50px 30px 50px ;
+}
+
+.email {
+    width: 100%;
+    border:none;
+    /* border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden; */
+    border-bottom:2.3px groove rgb(238, 235, 235);
+    border-image: linear-gradient(to right,#3C139D,#BC40C6,#FB1C7E) 30 stretch;
+  }
+  
+.email:focus {
+    outline: none;
+     /* background-color: #fff4f4; */
+  }
+.btnf{
+    width: 100%;
+    font-size: 18px !important;
+    background-image: linear-gradient(to right,#3C139D,#BC40C6,#FB1C7E);
+    color: white !important;
+    border:none !important;
+    font-family: 'Andika New Basic', sans-serif;
+}
+.icon-arrow{
+    right: 174px;
+    /* animation: arrow 2s 2s 1 ; */
+    animation-timing-function: cubic-bezier(1, 0.18, 0.68, 1.21);
+    animation-fill-mode: forwards;
+} 
+@keyframes arrow {
+    from{ left: -174px;}
+    to {left: 107px;}
+}
+.heading{
+    padding-top: 4rem;
+    margin-top: 5rem;
+    text-align: center;
+    color: wheat;
+}
+.footer{
+    color: wheat;
+    text-align: center;
+    font-family: 'Andika New Basic', sans-serif;
+} 
+.error{
+    right:62px;
+    top: 121px;
+    color: red;
+    size: 3px;
+    display: none !important;
+}
