@@ -22,20 +22,53 @@ body{
     background-color: whitesmoke;
     background-image: url("mb3.png");
     background-size:389px;
+
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
-    font-family: 'Bree Serif', serif;
+
+    font-family: 'Bree Serif', serif; 
+    z-index: 1;
+    
+    /* animation: login 2s linear 2s forwards; */
+
+    /* animation: register 2s linear 2s forwards; */
+} 
+/* loginn to register*/
+@keyframes register {
+    0%{left: 421px;
+        border-top-right-radius: 40px;border-bottom-right-radius: 40px;
+        border-top-left-radius: 0px;border-bottom-left-radius: 0px;
+    }
+    50%{ 
+        border-top-right-radius: 20px;border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;border-bottom-left-radius: 20px;
+    }
+    100%{
+        left:0px;
+        border-top-right-radius: 0px;border-bottom-right-radius: 0px;
+        border-top-left-radius: 40px;border-bottom-left-radius: 40px;
+    }
 }
+/* register to login*/
+@keyframes login {
+    from{left:0px;}
+    to{
+        left:421px; 
+        border-top-right-radius: 40px;border-bottom-right-radius: 40px;
+        border-top-left-radius: 0px;border-bottom-left-radius: 0px;
+    }
+}
+
 .login {
     position: absolute;
     height:100%;
     width: 53%;
     left:386px;
     /* background-color: whitesmoke; */
-    padding:30px 50px 30px 50px ;
+    padding:40px 50px 30px 50px ;
 }
 
-.email {
+.detail {
     width: 100%;
     border:none;
     /* border-top-style: hidden;
@@ -45,7 +78,7 @@ body{
     border-image: linear-gradient(to right,#3C139D,#BC40C6,#FB1C7E) 30 stretch;
   }
   
-.email:focus {
+.detail:focus {
     outline: none;
      /* background-color: #fff4f4; */
   }
@@ -63,7 +96,7 @@ body{
     animation-timing-function: cubic-bezier(1, 0.18, 0.68, 1.21);
     animation-fill-mode: forwards;
 } 
-@keyframes arrow {
+@keyframes arrow{
     from{ left: -174px;}
     to {left: 107px;}
 }
@@ -79,9 +112,51 @@ body{
     font-family: 'Andika New Basic', sans-serif;
 } 
 .error{
-    right:62px;
-    top: 121px;
     color: red;
     size: 3px;
     display: none !important;
+} 
+.error-login{
+    right:60px;
+    top: 129px;
+}
+.error-register{
+    right: 35px;
+    top: 189px;
+}
+
+.regBtn{
+    text-align: center;
+    font-size: 14px;
+    color: grey;
+}
+hr{ 
+    display: inline-block;
+    margin: 3px 5px  !important;
+    width:50px; height: 0 !important;
+    border-style: solid none none none !important;
+    border-width: 2px  !important;
+    border-color: rgb(190, 190, 190) !important;
+    /* background-color: white !important; */
+    opacity: 1 !important;
+    
+} 
+.switchTab{ cursor:pointer}
+.switchTab:active{
+    color: red;
+}
+.register{
+    position: absolute;
+    padding:40px 25px 30px 50px ;
+    width: 48%; height: 100%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    /* background-color: whitesmoke ; */
+}
+
+.passwordMismatch{
+    font-size: small;
+    color: red;
+    display: none;
+    /* display: flex; */
 }

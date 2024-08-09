@@ -15,7 +15,58 @@
 </head>
 <body>
     <div class="login-box mx-auto">
-        <div class="welcome">
+        
+        <div class="register">
+            <h1 style="font-family:'Bree Serif', serif;">Sign Up</h1>
+            
+            <div class="pt-4">
+            
+                <!-- name  -->
+                <div class="d-flex">
+                    <i class="fas fa-user mt-2 me-2"></i>
+                    <input id="" class="detail pb-2 mb-4" name="Name" placeholder="Full Name">
+                </div>
+                
+                <!-- email -->
+                <div class="d-flex">
+                    <i class="fas fa-at mt-2 me-2"></i>
+                    <input id="email1" class="detail pb-2 mb-4" name="Email" type="email" placeholder="Email Address" autocomplete="off" oninput="myfunc(1)">
+                    <i id = "error1" class="fas fa-exclamation-circle position-absolute error error-register"></i>
+                </div> 
+
+                <!-- password  -->
+                <div class="d-flex">
+                    <i class="fas fa-unlock mt-2 me-2"></i>
+                    <input id="password" class="detail pb-2 mb-4" name="password" type="password" placeholder="Password" value="">
+                </div>
+
+                <!-- conform password  -->
+                <div class="d-flex">
+                    <i class="fas fa-unlock mt-2 me-2"></i>
+                    <input id="confirm-password" class="detail pb-2 mb-4" name="password" type="password" placeholder="Re-Type Password" value="" oninput="passwordMatching()">
+                    <!-- <i class="far fa-eye-slash"></i>  -->
+                </div>
+                    
+                <div id="passwordMismatch" class="passwordMismatch ms-3 mt-1 mb-3">
+                    <i class="far fa-times-circle mt-1 mx-1"></i>
+                    <p class="">Password mismatch</p>
+                </div>
+      <!-- <i class="far fa-eye-slash"></i>  close-->
+      <!-- <i class="fas fa-eye"></i> open -->
+
+                <button class="btn btnf  mt-3 p-2 d-block" type="submit" onclick="arrowfn(1)">Let's Go
+                    <div id="arrow1"  class="d-inline position-relative icon-arrow"><i class="fas fa-chevron-right"></i></div>
+                </button> 
+            </div> 
+            <div class="regBtn mt-5" >
+                <!-- <hr> -->
+                    <span id ="log" class="switchTab" onclick="moveToReg()">Have already an account? Login here</span>
+                <!-- <hr> -->
+            </div>
+        
+        </div>
+
+        <div id="welcome" class="welcome">
             <h1 class="heading">Hey There!</h1>
             <p class="footer m-4">Start with a great sign-up process</p>
         </div>
@@ -23,19 +74,29 @@
         <div class="login">
             <h1 style="font-family:'Bree Serif', serif;">Sign In</h1>
             <div class="pt-4">
+
+                <!-- email -->
                 <div class="d-flex">
                     <i class="fas fa-user mt-2 me-2"></i>
-                    <input id="email" class="email pb-2 mb-4" name="Email" type="email" placeholder="Email Address" oninput="myfunc()">
-                    <i id = "error" class="fas fa-exclamation-circle position-absolute error"></i>
-                </div>
-                <div class="d-flex">
-                    <i class="fas fa-unlock mt-2 me-2"></i>
-                    <input class="email pb-2 mb-4" name="password" type="password" placeholder="Password" value="">
+                    <input id="email2" class="detail pb-2 mb-4" name="Email" type="email" placeholder="Email Address" autocomplete="off" oninput="myfunc(2)">
+                    <i id = "error2" class="fas fa-exclamation-circle position-absolute error error-login"></i>
                 </div>
 
-                <button class="btn btnf  mt-3 p-2 d-block" type="submit" onclick="arrowfn()">Let's Go
-                    <div id="arrow"  class="d-inline position-relative icon-arrow"><i class="fas fa-chevron-right"></i></div>
-                </button>
+                <!-- password  -->
+                <div class="d-flex">
+                    <i class="fas fa-unlock mt-2 me-2"></i>
+                    <input class="detail pb-2 mb-4" name="password" type="password" placeholder="Password" value="">
+                </div>
+
+                <button class="btn btnf  mt-3 p-2 d-block" type="submit" onclick="arrowfn(2)">Let's Go
+                    <div id="arrow2"  class="d-inline position-relative icon-arrow"><i class="fas fa-chevron-right"></i></div>
+                </button> 
+
+                <div class="regBtn mt-5" >
+                    <!-- <hr> -->
+                        <span id ="reg" class="switchTab"  onclick="moveToLog()">Not a member? Sign up now</span>
+                    <!-- <hr> -->
+                </div>
 
                 
             </div>
